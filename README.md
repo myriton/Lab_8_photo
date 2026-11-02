@@ -1,17 +1,35 @@
-# test2
+# Photo of the Day
 
-A new Flutter project.
+Приложение на Flutter, которое демонстрирует работу с асинхронностью
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+**Шевченко Вероника** 
+**ИСП-242**
 
-A few resources to get you started if this is your first Flutter project:
+## Стек и версии
+**Flutter:**3.47.9
+**Dart:**3.13.7
+**Платформа:** Web (Chrome)
+**Используемые пакеты:** http
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Скриншот приложения
+![Скриншот приложения](img\step3.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Как запустить
+1. Клонировать репозиторий: git clone https://github.com/myriton/Lab_8_photo.git
+2. Перейти в папку с проектом: cd Lab_8_photo
+3. Установить зависимости: flutter pub get
+4. Запустить: flutter run -d chrome
+
+## Изучили
+1. Понятие асинхронности в Dart и отличие синхронного выполнения от асинхронного
+2. Работа с объектами Future<T> и ключевыми словами async/await для приостановки выполнения функции без блокировки основного потока
+3. Обработка ошибок в асинхронном коде с помощью конструкции try/catch
+
+## Ответы
+1. **Future<T>** — это объект-обещание получить значение типа T в будущем. Обычное значение доступно сразу, а **Future** возвращается мгновенно, но результат внутри появляется только после завершения асинхронной операции
+2. **await** приостанавливает выполнение текущей функции до получения результата. Весь поток он не блокирует — UI приложения продолжает работать и реагировать на действия пользователя
+3. Первый раз — чтобы включить индикатор загрузки и сбросить старые данные. Второй раз — чтобы выключить индикатор и показать полученный результат
+4. Без скобок передается ссылка на функцию, которая сработает только при нажатии. Со скобками **_fetchPhoto()** функция вызовется сразу при отрисовке экрана, что приведет к ошибке
+5. **Image.network()** загружает картинку из интернета по URL. **Image.asset()** берет картинку из локальной папки проекта
